@@ -1,10 +1,10 @@
 import React from 'react'
 import './css/ItemListContainer.css'
 
-const ItemListContainer = (props) => {
+const ItemListContainer = (prop) => {
   return (
-    <div className="prop"><center><h3>Hola {props.name}, Bienvenido a Turbo-Gamer</h3></center></div>
+    <div className="prop"><center><h3>Hola {prop.name}, Bienvenido a Turbo-Gamer</h3></center></div>
   )
 }
 
-export default ItemListContainer
+export default ItemListContainer 
