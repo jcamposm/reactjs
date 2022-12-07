@@ -21,16 +21,15 @@ const DetailsProducts = () => {
           <div>
             <div className="card-body">    
             <h5 className="card-title h1 text-left mb-4 py-2 rounded-3">{productDetails.title}</h5>
-              <h6 className="card-title h4 bg-dark text-white p-2 rounded">Descripción</h6>
+              <h5 className="card-title h5 p-2 rounded">Descripción</h5>
               <p className="card-text py-4">{productDetails.descripcion}</p>
-              <hr></hr>
-              <h5 className="card-title h4 bg-dark text-white p-2 rounded mb-3">Precio</h5>
-              <span className="card-text  "></span><span className="card-text h3 text-danger ms-3">${productDetails.precio}</span>
+              <h5 className="card-title h5 p-2 rounded mb-3">Precio</h5>
+              <span className="card-text  "></span><span className="card-text h3 text-info ms-3">${productDetails.precio}</span>
               <hr></hr>
               <div className="container">
                 <div className="row">
-              <h5 className="card-title h4 bg-dark text-white p-2 rounded">Cantidad</h5>
-              <Count className="col-2"/><button className="btn btn-primary py-0 mt-2 col-2" ><i className="bi bi-cart-check-fill fs-3"></i> <span className="fs-3 ms-2"> + </span> </button>
+              <h5 className="card-title h5 p-2 rounded">Cantidad</h5>
+              <Count className="col-2"/><button className="contenedor py-0 mt-2 col-2" ><i className="bi bi-cart-check-fill fs-3"></i> <span className="fs-3 ms-2"> + </span> </button>
               </div>
               </div>
               <hr></hr>

@@ -1,3 +1,19 @@
 .card .card__contain {
     border: none !important;
 }
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    border: none;
+    background-color: #1DBCA9;
+    color: white;
+    border-radius: 5px;
+}
+
+.bi-cart-check-fill{
+    color: white !important;
+
+}
