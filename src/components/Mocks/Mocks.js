@@ -1,5 +1,5 @@
 
-export const products = [
+export const Productos = [
   {
     id: 1,
     title: 'Placa Madre AMD A520(Ryzen AM4) Micro ATX con M.2',

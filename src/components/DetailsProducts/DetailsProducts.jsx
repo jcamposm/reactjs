@@ -1,4 +1,4 @@
-import { products } from "../Mocks/Mocks"
+import { Productos } from "../Mocks/Mocks"
 import { useParams } from "react-router-dom"
 import Count from '../Count/Count'
 import './css/DetailsProducts.css'
@@ -6,7 +6,7 @@ import './css/DetailsProducts.css'
 const DetailsProducts = () => {
     const {id} = useParams()
     
-    const productDetails = products.find(element => element.id === parseInt(id) );
+    const productDetails = Productos.find(element => element.id === parseInt(id) );
   return (
     <>
     <div className="row">
