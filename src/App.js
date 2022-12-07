@@ -23,7 +23,7 @@ export function App() {
             <Route path="somos" element={<Somos />} />          
             <Route path="contacto" element={<Contact />} />
             <Route path="categoria/:categoria" element={<CategoriesProduct/>} />
-            <Route path="detalle/:id" element={<DetailProduct/>} />
+            <Route path="item/:id" element={<DetailProduct/>} />
             <Route path="/*" element={<Navigate to="" />} />            
           </Routes>
           <br/><br/>
