@@ -1,11 +1,13 @@
 import { products } from "../Mocks/Mocks"
 import ItemListContainer from "../ItemListContainer/ItemListContainer"
+import './css/Products.css'
 
 const Products = () => {
     return (
         <>
             <div className="row">
-                <h1>Productos</h1>
+                <hr></hr>
+                <center><h2>Nuestros Productos</h2></center>
                 <hr></hr>
                 {
                     products.map((item) =>

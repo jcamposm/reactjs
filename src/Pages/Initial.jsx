@@ -5,6 +5,7 @@ export const Initial = () => {
   return (
     <>
       <Sliders />
+      <br/>
       <Products />
     </>
   )
