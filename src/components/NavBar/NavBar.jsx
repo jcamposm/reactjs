@@ -26,9 +26,9 @@ const NavBar = () => {
         <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark dropdown-item  ${isActive ? 'activesDropdown' : ''}`} to={"categoria/motherboards"} > Placas Madres </NavLink>
         <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark ${isActive ? 'activesDropdown' : ''}`} to={"categoria/gpu"} >Tarjetas de Video</NavLink>
         <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark ${isActive ? 'activesDropdown' : ''}`} to={"categoria/perifericos"} >Periféricos</NavLink>
-        <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark ${isActive ? 'activesDropdown' : ''}`} to={"categoria/memorias"} > Pc Gamer </NavLink>
-        <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark ${isActive ? 'activesDropdown' : ''}`} to={"categoria/procesadores"} >Monitores</NavLink>
-        <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark ${isActive ? 'activesDropdown' : ''}`} to={"categoria/discosduros"} >Accesorios</NavLink>
+        <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark ${isActive ? 'activesDropdown' : ''}`} to={"categoria/memorias"} >Memorias</NavLink>
+        <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark ${isActive ? 'activesDropdown' : ''}`} to={"categoria/procesadores"} >Procesadores</NavLink>
+        <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark ${isActive ? 'activesDropdown' : ''}`} to={"categoria/discosduros"} >Discos Duros</NavLink>
         </NavDropdown>
         <NavLink className={({ isActive }) => `nav-link fw-bolder ${isActive ? 'actives' : ''}`} to={"/contacto"}>Contacto </NavLink>
         <div><CartWidget className="carrito"/></div>
