@@ -1,16 +1,36 @@
-import './App.css';
-import NavBar
-from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import NavBar from './components/NavBar/NavBar';
+import { Contact } from './Pages/Contact'
+import { Initial } from './Pages/Initial'
+import { CategoriesProduct } from './Pages/CategoriesProduct'
+import { DetailProduct }  from "./Pages/DetailProduct"
+import { Somos } from './Pages/Us'
+import "./App.css"
+import React from "react";
+import { BrowserRouter, Routes, Route , Navigate } from "react-router-dom";
 
 
-function App() {
+
+export function App() {
+
   return (
-    <div className="app">
-  <NavBar /><br/>
-  <ItemListContainer name="Jean Campos Maldonado" />
-  </div>
-  )
+    <>
+    <BrowserRouter>
+      <div className="App">
+        <div className="container mt-2">
+          <NavBar />
+          <hr></hr>
+          <Routes>            
+            <Route path="/" element={<Initial />} />
+            <Route path="somos" element={<Somos />} />          
+            <Route path="contacto" element={<Contact />} />
+            <Route path="categoria/:categoria" element={<CategoriesProduct/>} />
+            <Route path="detalle/:id" element={<DetailProduct/>} />
+            <Route path="/*" element={<Navigate to="" />} />            
+          </Routes>
+          <br/><br/>
+        </div>
+      </div>
+      </BrowserRouter>
+      </>
+  );
 }
-
-export default App;

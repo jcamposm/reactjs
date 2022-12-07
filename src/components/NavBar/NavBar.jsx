@@ -1,32 +1,37 @@
+import CartWidget from '../CartWidget/CartWidget.jsx'
+import { NavLink } from "react-router-dom";
 import React from 'react'
-import CartWidget from '../CartWidget/CartWidget'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/NavBar.css'
-import './css/NavBar.css'
+import Logo from './logo/Logo.jsx'
+
 
 const NavBar = () => {
-  const categorias = [{id: 1, nombre: "Gabinetes"},{id: 2, nombre: "Memorias"},{id: 3, nombre: "CPUS"},{id: 4, nombre: "Accesorios"},{id: 5, nombre: "Periféricos"}]
-  categorias.push({id:6, nombre: "Discos Duros"})
-  console.log(categorias)
+
   return (
   <div>
   <Navbar bg="light" expand="lg">
   <Container>
-    <Navbar.Brand href="#home"><h2>Turbo-Gamer</h2></Navbar.Brand>
+    <Navbar.Brand to={'/'}><Logo /></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ms-auto">
-        <Nav.Link href="#inicio">Inicio</Nav.Link>
-        <Nav.Link href="#quienes-somos">Quienes Somos</Nav.Link>
-        <NavDropdown title="Productos" id="basic-nav-dropdown">
-        {categorias.map((categoria) => {return <NavDropdown.Item key={categoria.id}>{categoria.nombre}</NavDropdown.Item>})}
+      <NavLink className={({ isActive }) => `nav-link fw-bolder ${isActive ? 'actives' : ''}`} to={"/"} end> Inicio</NavLink>
+      <NavLink className={({ isActive }) => `nav-link  fw-bolder ${isActive ? 'actives' : ''}`} to={"/somos"} end>Quienes Somos</NavLink>
+        <NavDropdown title="Productos" id="basic-nav-dropdown" className="fw-bolder">
+        <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark dropdown-item  ${isActive ? 'activesDropdown' : ''}`} to={"categoria/motherboards"} > Placas Madres </NavLink>
+        <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark ${isActive ? 'activesDropdown' : ''}`} to={"categoria/gpu"} >Tarjetas de Video</NavLink>
+        <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark ${isActive ? 'activesDropdown' : ''}`} to={"categoria/perifericos"} >Periféricos</NavLink>
+        <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark ${isActive ? 'activesDropdown' : ''}`} to={"categoria/memorias"} > Pc Gamer </NavLink>
+        <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark ${isActive ? 'activesDropdown' : ''}`} to={"categoria/procesadores"} >Monitores</NavLink>
+        <NavLink className={({ isActive }) => `nav-link activesDropdown2 fw-normal text-dark ${isActive ? 'activesDropdown' : ''}`} to={"categoria/discosduros"} >Accesorios</NavLink>
         </NavDropdown>
-        <Nav.Link href="#contacto">Contactos</Nav.Link>
-        <CartWidget className="carrito" />
+        <NavLink className={({ isActive }) => `nav-link fw-bolder ${isActive ? 'actives' : ''}`} to={"/contacto"}>Contacto </NavLink>
+        <div><CartWidget className="carrito"/></div>
       </Nav>
     </Navbar.Collapse>
   </Container>
@@ -35,4 +40,4 @@ const NavBar = () => {
   )
 };
 
-export default NavBar;
+export default NavBar
