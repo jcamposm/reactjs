@@ -1,0 +1,23 @@
+.icono-carrito{
+    width: 40px;
+    height: 40px;
+  }
+  .nav-carrito {
+    display: flex;
+  }
+
+.qty-display {
+    text-decoration: none;
+    position: absolute;
+    margin-top: 3px;
+    display: block;
+    min-width: 1.6em;
+    height: 1.6em;
+    line-height: 1.5em;
+    border-radius: 100%;
+    color: #fff;
+    background-color: #d9534f;
+    text-align: center;
+    font-size: 10px;
+    margin-left: 25px;
+}

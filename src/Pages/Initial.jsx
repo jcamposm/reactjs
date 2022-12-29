@@ -1,4 +1,4 @@
-import Products from '../components/Products/Products'
+import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
 import { Sliders } from '../components/Sliders/Sliders'
 
 export const Initial = () => {
@@ -6,7 +6,7 @@ export const Initial = () => {
     <>
       <Sliders />
       <br/>
-      <Products />
+      <ItemListContainer />
     </>
   )
 }
